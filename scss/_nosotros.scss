@@ -1,0 +1,45 @@
+@import "./mixim";
+@import "./-mapa.scss";
+@import "./variables";
+main{
+    .nosotros1{
+        display:grid;
+        justify-content: center;
+    }
+    .Nosotros-2{
+        height: 600px;
+        padding-top: 30px;
+        margin: auto;
+    }
+    .nosotrosp{
+        padding-top:35px ;
+
+    }
+    .nosotros{
+        @include textos;
+        font-size:map-get($fuentes,fuente1 );
+    }
+}
+@media screen and (max-width: 990px) {
+
+    main{
+        .titulo1{
+            font-size:map-get($fuentes,fuente8 );
+            padding-top: 0;
+        }
+        .nosotros1{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .Nosotros-2{
+            width: 100%;
+            height: inherit;
+        }
+        .nosotros{
+            padding-top: 0;
+            text-align: justifys;
+            font-size:map-get($fuentes,fuente2 );
+    }
+}
+}

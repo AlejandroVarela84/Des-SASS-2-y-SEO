@@ -1,0 +1,7 @@
+@import "./variables";
+
+@mixin textos {
+    color:$letras;
+    font-family:'Merriweather', serif;
+    text-align: justify;   
+}

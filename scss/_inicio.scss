@@ -1,0 +1,46 @@
+@import "./mixim";
+@import"./-mapa.scss";
+main{
+    .local{
+        display: grid;
+        grid-template-areas: " a b ";
+        grid-column-gap: 27px;
+        grid-row-gap: 35px;
+    }   
+    .desc1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .parrafo{
+        @include textos;
+        font-size: map-get($fuentes,fuente4 );
+        display: grid;
+        align-content: space-around;
+    }
+    .desc2{
+        @extend .desc1;
+    }          
+}
+@media screen and (max-width: 1333px) {
+    main{
+        .parrafo{
+            font-size: map-get($fuentes, fuente1);
+        }
+    }
+}
+@media screen and (max-width: 990px) {
+    main{
+        .local{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        } 
+        .parrafo{
+            font-size: map-get($fuentes, fuente2);
+        }  
+        .desc2{
+            order: 4;
+        } 
+    }   
+}
